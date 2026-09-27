@@ -52,9 +52,7 @@ export default function Hero() {
             {NUMEROS.map((item) => (
               <div key={item.label}>
                 <dt className="text-3xl font-extrabold text-sand-400">
-                  {item.prefix}
-                  {item.value}
-                  {item.suffix}
+                  {item.display}
                 </dt>
                 <dd className="mt-1 text-sm text-white/75">{item.label}</dd>
               </div>
