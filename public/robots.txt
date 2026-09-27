@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mabelgrafica.com.br/sitemap.xml
