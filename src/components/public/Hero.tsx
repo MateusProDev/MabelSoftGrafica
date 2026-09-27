@@ -1,4 +1,4 @@
-import { BUSINESS, buildWhatsAppUrl, buildMapsUrl, ADDRESS_LINE } from "@/lib/business";
+import { buildWhatsAppUrl } from "@/lib/business";
 import { NUMEROS } from "@/lib/content";
 
 export default function Hero() {
@@ -15,90 +15,50 @@ export default function Hero() {
       />
 
       <div className="container-mabel relative">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="animate-fade-up">
-            <h1 className="text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-[3.4rem]">
-              Gráfica rápida com tudo o que você precisa em{" "}
-              <span className="bg-gradient-to-r from-sand-400 to-white bg-clip-text text-transparent">
-                um só lugar
-              </span>
-            </h1>
+        <div className="mx-auto max-w-3xl text-center">
+          <h1 className="text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-[3.6rem]">
+            Gráfica rápida com tudo o que você precisa em{" "}
+            <span className="bg-gradient-to-r from-sand-400 to-white bg-clip-text text-transparent">
+              um só lugar
+            </span>
+          </h1>
 
-            <p className="mt-6 max-w-xl text-lg text-white/85">
-              Xerox, impressões, plastificação, encadernação, currículos, boletos
-              e materiais personalizados como cartões, panfletos, adesivos e caixas
-              de festa. Agilidade de balcão e atendimento por WhatsApp.
-            </p>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-white/85">
+            Xerox, impressões, plastificação, encadernação, currículos, boletos
+            e materiais personalizados como cartões, panfletos, adesivos e caixas
+            de festa. Agilidade de balcão e atendimento por WhatsApp.
+          </p>
 
-            <div className="mt-9 flex flex-wrap gap-4">
-              <a
-                href={buildWhatsAppUrl(
-                  "Olá! Vi o site da Mabel Gráfica e gostaria de fazer um orçamento."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-whats"
-              >
-                Pedir orçamento no WhatsApp
-              </a>
-              <a
-                href="#servicos"
-                className="btn-brand border border-white/30 !bg-white/10 !bg-none backdrop-blur"
-              >
-                Ver todos os serviços
-              </a>
-            </div>
-
-            <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-white/15 pt-8">
-              {NUMEROS.map((item) => (
-                <div key={item.label}>
-                  <dt className="text-3xl font-extrabold text-sand-400">
-                    {item.value}
-                    {item.suffix}
-                  </dt>
-                  <dd className="mt-1 text-sm text-white/75">{item.label}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <aside className="rounded-3xl bg-white p-7 text-mabel-900 shadow-2xl">
-            <p className="text-xs font-bold uppercase tracking-widest text-slate-500">
-              Fale com a gente
-            </p>
-            <p className="mt-2 text-3xl font-extrabold text-mabel-800">
-              {BUSINESS.phoneDisplay}
-            </p>
-
-            <ul className="mt-6 space-y-3 text-sm">
-              <li className="flex gap-3">
-                <span className="font-bold text-mabel-600">✓</span>
-                <span>Xerox, impressão e digitalização na hora</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="font-bold text-mabel-600">✓</span>
-                <span>Cartões, panfletos, adesivos e personalizados</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="font-bold text-mabel-600">✓</span>
-                <span>Manda o arquivo pelo WhatsApp e passa para retirar</span>
-              </li>
-            </ul>
-
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
             <a
-              href={buildMapsUrl()}
+              href={buildWhatsAppUrl(
+                "Olá! Vi o site da Mabel Gráfica e gostaria de fazer um orçamento."
+              )}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-7 block rounded-2xl bg-slate-50 p-4 text-sm leading-relaxed text-slate-700 transition-colors hover:bg-slate-100"
+              className="btn-whats"
             >
-              <strong className="block text-mabel-800">Como chegar</strong>
-              {ADDRESS_LINE}
+              Pedir orçamento no WhatsApp
             </a>
+            <a
+              href="#servicos"
+              className="btn-brand border border-white/30 !bg-white/10 !bg-none backdrop-blur"
+            >
+              Ver todos os serviços
+            </a>
+          </div>
 
-            <p className="mt-5 text-center text-xs text-slate-500">
-              Aceitamos Pix, dinheiro e cartão.
-            </p>
-          </aside>
+          <dl className="mx-auto mt-14 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/15 pt-8">
+            {NUMEROS.map((item) => (
+              <div key={item.label}>
+                <dt className="text-3xl font-extrabold text-sand-400">
+                  {item.value}
+                  {item.suffix}
+                </dt>
+                <dd className="mt-1 text-sm text-white/75">{item.label}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>
