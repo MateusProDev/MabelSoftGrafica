@@ -4,6 +4,7 @@ import { NUMEROS } from "@/lib/content";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-mabel-900 via-mabel-800 to-mabel-600 pt-32 pb-20 text-white sm:pt-40 sm:pb-28">
+      {/* Brilho decorativo */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-mabel-400/20 blur-3xl"
@@ -16,11 +17,6 @@ export default function Hero() {
       <div className="container-mabel relative">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="animate-fade-up">
-            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-green-400" />
-              Aberto de segunda a sábado · Sabiaguaba, Fortaleza
-            </span>
-
             <h1 className="text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-[3.4rem]">
               Gráfica rápida com tudo o que você precisa em{" "}
               <span className="bg-gradient-to-r from-sand-400 to-white bg-clip-text text-transparent">
