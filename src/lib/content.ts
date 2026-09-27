@@ -132,7 +132,7 @@ export const FAQ = [
 
 /* Numeros do negocio, exibidos como prova social */
 export const NUMEROS = [
-  { value: 15, suffix: "+", label: "Serviços no balcão" },
+  { prefix: "+", value: 15, label: "Serviços no balcão" },
   { value: 100, suffix: "%", label: "Impressão na hora" },
   { value: 6, suffix: " dias", label: "Aberto por semana" },
 ] as const;
